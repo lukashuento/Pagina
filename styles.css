@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-image: url('fondo.jpg'); /* Reemplaza 'fondo.jpg' con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Estilo solo al h1 */
+h1{
+    font-family: 'Bebas Neue', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+/* Estilo a la clase texto */
+h2{
+    font-family: 'Bebas Neue', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+.cojunto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px; /* Empuja la sección hacia el final de la página */
+    padding: 5px;
+}
+
+.img {
+    margin: 0 40px; /* Espaciado entre las imágenes */
+}
+
+.img img {
+    width: 150px; /* Tamaño de las imágenes (ajustalo según lo que necesites) */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%; /* Ajusta el espacio vertical */
+}
+
+.titulo h1 {
+    font-size: 48px; /* Ajusta el tamaño del título */
+    margin-top: 10px;
+}
+
+.superior {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.superior .izquierda {
+    position: absolute;
+    top: 5px; /* Ajusta la distancia desde la parte superior */
+    left: 20px; /* Ajusta la distancia desde la izquierda */
+    font-size: 26px; /* Tamaño de la fuente del <h2> */
+}
+
+.superior .derecha {
+    position: absolute;
+    top: 5px; /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    font-size: 26px; /* Tamaño de la fuente del <h2> */
+}
+
+.pagos {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 26px;
+}
+
+.enlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.enlace .telegram {
+    width: 350px;
+    height: auto;
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+.enlace .wpp {
+    width: 350px;
+    height: auto;
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
+}
+
+
+
