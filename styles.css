@@ -1,80 +1,70 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
     margin: 0px;
     padding: 0px;
     position: relative;
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
     background-image: url('fondo.jpg'); /* Reemplaza 'fondo.jpg' con la ruta de tu imagen */
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
+    min-height: 100vh; /* Asegura que el fondo cubra al menos toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Estilo solo al h1 */
-h1{
+h1 {
     font-family: 'Bebas Neue', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-size: 48px; /* Ajusta el tamaño del título */
+    margin-bottom: 20px; /* Agrega espacio debajo del título */
+    text-align: center; /* Centra el texto */
 }
 
 /* Estilo a la clase texto */
-h2{
+h2 {
     font-family: 'Bebas Neue', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-}
-.cojunto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px; /* Empuja la sección hacia el final de la página */
-    padding: 5px;
+    font-size: 26px; /* Ajusta el tamaño de la fuente */
+    line-height: 1.5; /* Mejora la legibilidad */
+    margin-top: 10px; /* Agrega espacio desde el título */
 }
 
+/* Contenedor superior */
+.superior {
+    display: flex;
+    flex-direction: column; /* Coloca textos uno debajo del otro */
+    align-items: center; /* Centra los textos */
+    gap: 10px; /* Espaciado entre los textos */
+    margin-top: 20px; /* Espacio desde el borde superior */
+}
+
+/* Contenedor de las imágenes */
+.cojunto {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden en filas */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espaciado entre las imágenes */
+    margin-top: 20px; /* Espacio superior para el contenedor */
+}
+
+/* Estilo para cada imagen */
 .img {
-    margin: 0 40px; /* Espaciado entre las imágenes */
+    width: calc(50% - 20px); /* Dos imágenes por fila, con un pequeño espacio entre ellas */
+    text-align: center; /* Centra las imágenes dentro del contenedor */
 }
 
 .img img {
-    width: 150px; /* Tamaño de las imágenes (ajustalo según lo que necesites) */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
+    width: 100%; /* Las imágenes ocupan todo el espacio disponible dentro del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5)); /* Agrega sombra a las imágenes */
 }
 
-.titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40%; /* Ajusta el espacio vertical */
-}
-
-.titulo h1 {
-    font-size: 48px; /* Ajusta el tamaño del título */
-    margin-top: 10px;
-}
-
-.superior {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.superior .izquierda {
-    position: absolute;
-    top: 5px; /* Ajusta la distancia desde la parte superior */
-    left: 20px; /* Ajusta la distancia desde la izquierda */
-    font-size: 26px; /* Tamaño de la fuente del <h2> */
-}
-
-.superior .derecha {
-    position: absolute;
-    top: 5px; /* Ajusta la distancia desde la parte superior */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    font-size: 26px; /* Tamaño de la fuente del <h2> */
-}
-
+/* Contenedor de los iconos de pago */
 .pagos {
     display: flex;
     justify-content: center;
@@ -82,25 +72,71 @@ h2{
     font-size: 26px;
 }
 
+/* Estilo para los enlaces */
 .enlace {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0px;
     margin-top: 10px;
 }
 
-.enlace .telegram {
-    width: 350px;
-    height: auto;
-    filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
-}
-
+.enlace .telegram,
 .enlace .wpp {
     width: 350px;
     height: auto;
     filter: drop-shadow(2px 5px 4px rgba(0, 0, 0, 0.5));
 }
 
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 48px; /* Reducir tamaño de texto en celulares */
+    }
+
+    h2 {
+        font-size: 26px; /* Reducir tamaño de los textos */
+        margin-top: 10px; /* Ajustar el margen */
+    }
+
+    .superior {
+        margin-top: 20px; /* Ajustar espacio superior */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .enlace .telegram, 
+    .enlace .wpp {
+        width: 350px; /* Reducir tamaño de iconos */
+    }
+
+    .titulo {
+        height: auto; /* Permitir que el contenido se adapte */
+        padding: 10px; /* Agregar espacio interno */
+    }
+
+    .cojunto {
+        flex-wrap: wrap; /* Permitir que las imágenes se acomoden en filas */
+        justify-content: center;
+    }
+
+    .img {
+        margin: 10px; /* Reducir márgenes para mejor distribución */
+        width: calc(50% - 10px); /* Asegura que las imágenes ocupen la mitad del ancho disponible */
+    }
+
+    .img img {
+        width: 100%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    .pagos {
+        font-size: 20px; /* Reducir el texto */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .enlace {
+        flex-direction: column; /* Reorganizar enlaces verticalmente */
+        gap: 20px; /* Espaciado entre los iconos */
+    }
+}
 
 
